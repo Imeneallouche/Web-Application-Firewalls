@@ -255,6 +255,27 @@ print ("Thanks for your interest in %s",name);
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <br><br><br><br><br><br><br><br><br><h1 align="center">🌐 Hackers objectives through XSS 🌐</h1>
 <br><p>The objective is to insert JavaScript into a data stream so that it executes in the users browser.The client system is open to attack, but so is any site with open valid sessions in the client.</p>
 <p>• The executable code can:<br>
@@ -266,5 +287,58 @@ print ("Thanks for your interest in %s",name);
 –Private data harvesting.<br>
 –Session data interception.<br>
 –Site vandalism.<br>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <br><br><br><br><br><br><br><br><br><h1 align="center">🌐 What does this mean to a developer 🌐</h1>
+  <p>You aren’t responsible for boneheaded users. But you are responsible for what you provide to the users. 
+  Anything that is sent to a browser (or other JavaScript-friendly environment) must be free of malicious scripts.<br>
+ That sounds easy, but it isn’t, primarily because HTML is so tolerant.</p>
+ 
+ <br><p>Everything you send to the browser must be processed to remove any malicious scripts.<br>
+  <b> How do you differentiate between a malicious script and one of your own good scripts?</b></p>
+  
+<br><p>The primary attack vectors are:</p>
+ <table>
+    <tr>
+      <td>User inputs</td>
+      <td>that are reflected back to the browser. Names, id’s, input values, …</td>
+    </tr>
+    
+    <tr>
+      <td>User data</td>
+      <td>that is stored and later sent to other users through the browser. Emails, posts, …</td>
+    </tr>
+  </table>
+
+• Those users could be high privileged users.
   
  
