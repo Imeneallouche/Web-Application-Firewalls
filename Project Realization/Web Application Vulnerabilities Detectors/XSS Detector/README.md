@@ -198,7 +198,7 @@ print ("Thanks for your interest in %s",name);
 </html>
 ```
   
- <p>You are looking for an input that lets you feed an exploit back to the page.<br>
+ <br><p>You are looking for an input that lets you feed an exploit back to the page.<br>
 • Some document elements have properties like <b>OnClick,OnLoad, OnChange, OnSubmit, OnMove, OnKeyPress</b> and so on.<br>
 • These are by definition, Javascript, without any specific tags.</p>
 
@@ -218,7 +218,35 @@ print ("Thanks for your interest in %s",name);
   </body>
 </html>
 ```
+
+<br><p><b>HTML elements like body</b></p>
+
+```html
+<body onload=javascript:alert(document.cookie)
+<div background="javascript:alert(document.cookie)";>
+<iframe width="0" src="http://anysite/anyfile" />
+```
+<p>Note that new browser technology has defanged much of this (Content Security Policy). Read about it</p>
     
+
+<br><p><b> HTML attributes</b></p>
+
+```html
+  http://www.domain.site/search/partner/index.cfm?sessionid=1234567
+8901&hid=%22+STYLE%3D%22backgroundimage%3A+javascript:%28alert
+%28%27Is_XSS_HERE%3F%27%29%29
+  ```
+  
+```html
+<td>
+  <a href="/index.cfm?sessionid=12345678901&hid="" STYLE="background-image:expression(alert('Is_XSS_HERE?'))">
+    <img src="http://somesite.com/images/mylogo.gif" width="200" height="80" border="0">
+  </a>
+</td>
+```
+                      
+
+
 
 
 
