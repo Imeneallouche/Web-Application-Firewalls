@@ -327,17 +327,17 @@ print ("Thanks for your interest in %s",name);
   <b> How do you differentiate between a malicious script and one of your own good scripts?</b></p>
   
 <br><p>The primary attack vectors are:</p>
- <table>
-    <tr>
-      <td>User inputs</td>
-      <td>that are reflected back to the browser. Names, id’s, input values, …</td>
-    </tr>
-    
-    <tr>
-      <td>User data</td>
-      <td>that is stored and later sent to other users through the browser. Emails, posts, …</td>
-    </tr>
-  </table>
+<table>
+  <tr>
+    <td><b> User inputs </b></td>
+    <td colspan='10'>that are reflected back to the browser such as: <b> Names, id’s, input values, … </b></td>
+  </tr>
+  
+  <tr>
+    <td><b> User data </b></td>
+    <td colspan='10'>that is stored and later sent to other users through the browser such as <b> Emails, posts, … </b></td>
+  </tr>
+</table>
 
 • Those users could be high privileged users.
   
