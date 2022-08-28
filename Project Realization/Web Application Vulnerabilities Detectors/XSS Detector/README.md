@@ -239,7 +239,7 @@ print ("Thanks for your interest in %s",name);
   
 ```html
 <td>
-  <a href="/index.cfm?sessionid=12345678901&hid="" STYLE="background-image:expression(alert('Is_XSS_HERE?'))">
+  <a href="/index.cfm?sessionid=12345678901&hid="" STYLE="background-image:expression(alert(document.cookie))">
     <img src="http://somesite.com/images/mylogo.gif" width="200" height="80" border="0">
   </a>
 </td>
