@@ -426,6 +426,18 @@ Escape all outgoing data (to HTML):
 Deny unexpected incoming variables:
   
  ```
-
-  
  
+ 
+ 
+ <br><br><p>This is all made more difficult by the HTML tolerance for weird formats.</p>
+ 
+ ```html
+<img src=&#106;&#97;&#118;&#97;&#115;&#99;&#114;&#105;&#112;&#116;&#58;&#97;&#108;&#101;&#114;&#116;&#40;&#39;&#88;&#83;&#83;&#39;&#41;>
+<!--javascript:alert('XSS')-->
+<img src=jav a sc ript : doc Ument.coo kie( ); &#3e
+alert(string.fromChar (88,83,83&#41;&#59;
+
+<< script >
+<script src=http://hackme.org <B> 
+ \u003c;script\u003e; <!--<script>-->
+```
