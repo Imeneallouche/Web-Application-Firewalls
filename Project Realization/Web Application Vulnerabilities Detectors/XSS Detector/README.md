@@ -337,8 +337,12 @@ print ("Thanks for your interest in %s",name);
     <td><b> User data </b></td>
     <td colspan='10'>that is stored and later sent to other users through the browser such as <b> Emails, posts, … </b></td>
   </tr>
+  
+  <tr>
+    <td><b> Super Users </b></td>
+    <td colspan='10'>Those users could be high privileged users.</td>
+  </tr>
 </table>
 
-• Those users could be high privileged users.
   
  
