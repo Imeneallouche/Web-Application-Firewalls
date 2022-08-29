@@ -354,6 +354,33 @@ echo "<meta name='get_config_name(CNAME)'>";
 echo "<form>Name <input type=“text” name=“name” value=“$email_addr”><BR> …";
 ```
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br><br><br><br><br><br><br><br><br><h1 align="center">🌐 What Can You Do As Web Developer 🌐</h1>
 <br><br><p>• Each time a variable is used, you have to be concerned about the source of the value.<br>
   • You might think that all you have to do is escape the angle brackets: </p>
   
@@ -367,6 +394,38 @@ echo "<form>Name <input type=“text” name=“name” value=“$email_addr”>
   <img src=“javascript:alert(document.cookie)>
 
 ```
+
+
+
+<br><br><p> Your choices are:</p>
+
+```yaml
+Escape all incoming data:
+  - What is you want to allow scripts (rare case) or if angle brackets are possible? 
+  What if you allow users to upload HTML files?
+  
+  - Escaping may still be fine since you probably don’t want any included scripts executing.
+  The angle brackets will simply appear as angle brackets.
+  
+  - What about the other stuff? Convert javascript to java$cript. Don’t forget JavaScript
+  and JAVaSCript, …
+  
+  
+  
+ 
+
+Escape all outgoing data (to HTML):
+  - Same problems.
+  - Doesn’t modify data until necessary. Stored data will still be accurate. This is important
+  to some people.
+  
+  
+  
+  
+  
+Deny unexpected incoming variables:
+  
+ ```
 
   
  
