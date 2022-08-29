@@ -344,5 +344,29 @@ print ("Thanks for your interest in %s",name);
   </tr>
 </table>
 
+
+<br><br><p>The typical scenario is that a web page contains a number of places where data is inserted:</p>
+```shell
+echo "Hi $name, welcome";
+echo "<BODY background='$themecolor'>";
+echo "<TITLE>$cname</TITLE>";
+echo "<meta name='get_config_name(CNAME)'>";
+echo "<form>Name <input type=“text” name=“name” value=“$email_addr”><BR> …";
+```
+
+<br><br><p>• Each time a variable is used, you have to be concerned about the source of the value.<br>
+  • You might think that all you have to do is escape the angle brackets: </p>
+  
+  ```
+  <  &lt; >  &gt;
+   ```
+  <p>. But you can’t ignore this case:</p>
+  
+```html
+  <body onload=alert (document.cookie)>...</body>
+  <img src=“javascript:alert(document.cookie)>
+
+```
+
   
  
