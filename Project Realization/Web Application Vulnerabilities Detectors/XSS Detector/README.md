@@ -441,3 +441,55 @@ alert(string.fromChar (88,83,83&#41;&#59;
 <script src=http://hackme.org <B> 
  \u003c;script\u003e; <!--<script>-->
 ```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br><br><br><br><br><br><br><br><br><h1 align="center">🌐 The Risk 🌐</h1>
+• Under HIPAA guidelines, unlimited.
+• In general, lots of bad press.
+• Misappropriation of services.
+• Data leakage.
+• Many go unreported
+• Many XSS attacks are designed to vandalize
+• But the ability to execute a script means the user has control of the browser, in a limited fashion
+• Damage potential could be high
+• But, they are often difficult to exploit in such a way that the actual damage is high
+• Usually the affected users are limited
