@@ -529,7 +529,39 @@ Simple case: escape scripting tags like <script> … </script>.<br>
 So, <script> becomes %3Cscript%3E </p>
 
 
+  
+  
+  
+  
+  
 <br><br><br><h2 align="center">Are there others? Of course!</h2>
+
+
+<table>
+  <tr>
+    <td><b>Sanitize your inputs </b></td>
+    <td colspan='10'>
+      <p>
+        –This can be difficult because there might be situations where <script> or some form of it is legitimate.<br><br>
+        –It only matters if the information will be viewed in an HTML executing application<br><br>
+        –You can convert < into &lt ; and > into &gt ; <br><br>
+        –Don't forget all of the various encodings
+      </p>
+    </td>
+  </tr>
+  
+  <tr>
+    <td><b>HTML Escaping</b></td>
+    <td colspan='10'>
+      <p>
+        –This can be difficult because there might be situations where <script> or some form of it is legitimate.<br><br>
+        –It only matters if the information will be viewed in an HTML executing application<br><br>
+        –You can convert < into "&lt;" and > into "&gt;" <br><br>
+        –Don't forget all of the various encodings
+      </p>
+    </td>
+  </tr>
+</table>
 
 
 
