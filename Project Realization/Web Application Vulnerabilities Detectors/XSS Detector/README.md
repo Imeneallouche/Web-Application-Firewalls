@@ -482,7 +482,7 @@ alert(string.fromChar (88,83,83&#41;&#59;
 
 
 
-<br><br><br><br><br><br><br><br><br><h1 align="center">🌐 The Risk 🌐</h1>
+ "
 <br><p>
 • Under HIPAA guidelines, unlimited.<br>
 • In general, lots of bad press.<br>
@@ -494,3 +494,43 @@ alert(string.fromChar (88,83,83&#41;&#59;
 • Damage potential could be high<br>
 • But, they are often difficult to exploit in such a way that the actual damage is high<br>
 • Usually the affected users are limited<br></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br><br><br><br><br><br><br><br><br><h1 align="center">🌐 Dicovery 🌐</h1>
+<h2 align="center"> How would you conduct an attack against a site that used only POST parameters? </h2>
+
+<p>
+first:  Look at the source of returned HTML pages<br>
+second: Can you see places where input data, or anything you can control is reflected to the page?<br>
+Remember that often the goal is to simply find a page you can link to with the correct parameters:<br>
+   – Look at all the exchanges.<br>
+   – Get (URL) parameters are much easier<br>
+Use tools like XSS-Me<br>
+Simple case: escape scripting tags like <script> … </script>.<br>
+<script> ... </script> becomes &lt;script&gt; … &lt;/script&gt; <br>
+So, <script> becomes %3Cscript%3E </p>
+
+
+<br><br><br><h2 align="center">Are there others? Of course!</h2>
+
+
+
+
