@@ -562,7 +562,21 @@ So, <script> becomes %3Cscript%3E </p>
     </td>
   </tr>
     
-    
+  <tr>
+    <td><b>Attributes Danger</b></td>
+    <td colspan='10'>
+      <p>
+        –Because attributes can be dangerous, encode all ASCIICC with &#xCC;<br><br>
+        –Make sure that all attributes are quoted<br><br>
+        –Unquoted attributes are subject to being used in almost any desired way, but a quoted attribute has to have a matching quote<br><br>
+        –If you are substituting in Javascript, you have a special problem:
+        
+        ```python
+        style_string = 'style width=' + incoming_width …
+        ```
+      </p>
+    </td>
+  </tr> 
     
     
 </table>
