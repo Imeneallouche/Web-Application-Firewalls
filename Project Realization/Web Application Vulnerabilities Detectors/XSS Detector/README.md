@@ -565,17 +565,6 @@ So, <script> becomes %3Cscript%3E </p>
     
     
     
- <tr>
-    <td><b>Attributes Danger</b></td>
-    <td colspan='10'>
-      <p>
-        –Because attributes can be dangerous, encode all ASCIICC with &#xCC;<br>
-        –It only matters if the information will be viewed in an HTML executing application<br><br>
-        –You can convert < into "&lt;" and > into "&gt;" <br><br>
-        –Don't forget all of the various encodings
-      </p>
-    </td>
-  </tr>
 </table>
 
 
