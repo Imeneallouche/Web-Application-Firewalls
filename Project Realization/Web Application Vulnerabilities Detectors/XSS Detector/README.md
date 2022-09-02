@@ -556,7 +556,7 @@ So, <script> becomes %3Cscript%3E </p>
       <p>
         –This can be difficult because there might be situations where <script> or some form of it is legitimate.<br><br>
         –It only matters if the information will be viewed in an HTML executing application<br><br>
-        –You can convert < into "&lt;" and > into "&gt;" <br><br>
+        – You can convert < into "&lt"; and > into "&gt;"<br><br>
         –Don't forget all of the various encodings
       </p>
     </td>
@@ -569,11 +569,26 @@ So, <script> becomes %3Cscript%3E </p>
         –Because attributes can be dangerous, encode all ASCIICC with &#xCC;<br><br>
         –Make sure that all attributes are quoted<br><br>
         –Unquoted attributes are subject to being used in almost any desired way, but a quoted attribute has to have a matching quote<br><br>
-        –If you are substituting in Javascript, you have a special problem:
-        
-        ```python
-        style_string = 'style width=' + incoming_width …
-        ```
+        –If you are substituting in Javascript, you have a special problem: style_string = 'style width=' + incoming_width …
+        -because everything is legal. To avoid problems, escape everything by converting ASCII CC to \xCC
+        - If you have to handle user input HTML, be prepared to destroy it to make it safe
+      </p>
+    </td>
+  </tr> 
+  
+  
+  
+  
+ <tr>
+    <td><b>Design phase</b></td>
+    <td colspan='10'>
+      <p>
+        –Set coding standards for HTML and JavaScript
+        –Identify all places where reflected input is allowed
+        –Decide now, sanitize inputs or encode outputs or both
+        –Establish module structure for input and output handling
+        –Design code for escaping all HTML and JavaScript
+        –Write test plans for testing for XSS
       </p>
     </td>
   </tr> 
